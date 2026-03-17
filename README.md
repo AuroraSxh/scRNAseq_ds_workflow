@@ -1,90 +1,104 @@
-# scRNAseq Downstream Workflow
+# scRNA-seq Downstream Workflow
 
-This repository contains downstream single-cell RNA-seq workflows without bundled data.
+Code-only downstream single-cell RNA-seq workflows for public repository sharing.
 
-It currently includes two downstream analysis tracks:
+This repository keeps analysis code, workflow entry points, lightweight configuration, and expected output structure, while excluding datasets, large intermediate objects, and generated results.
 
-- `pbmc/` for a compact PBMC workflow built around Scanpy
-- `crc/` for a larger colorectal cancer integration and subtype analysis workspace
+## Overview
 
-The repository intentionally excludes:
-- raw data
-- processed AnnData or Seurat objects
-- generated figures and tables
-- local virtual environments
-- local R package libraries
+Included workflow tracks:
 
-It keeps only:
-- code
-- workflow entry points
-- config
-- README files
-- expected output structure
+- `pbmc/`: compact Scanpy-based PBMC downstream analysis
+- `crc/`: colorectal cancer integration, annotation, and communication analysis workspace
+
+Core downstream tasks covered across the repository:
+
+- quality control and filtering
+- normalization and dimensionality reduction
+- clustering and marker discovery
+- heuristic cell-type annotation
+- subtype-focused follow-up analyses
 
 ## Repository Layout
 
 ```text
 .
 ├── README.md
+├── LICENSE
+├── .gitignore
 ├── pbmc/
 └── crc/
 ```
 
-## PBMC Workflow
+## Workflow Modules
 
-Directory:
-- `pbmc/`
+### `pbmc/`
 
-Contents:
-- `code/` for analysis scripts
-- `workflows/` for runnable wrappers
-- `expected_results/` for result structure only
+This module is intended as a minimal, runnable scRNA-seq downstream example with:
 
-Use this workflow when you want a minimal downstream scRNA-seq example with:
 - QC
 - normalization
-- PCA / UMAP / tSNE
+- PCA / UMAP / t-SNE
 - Leiden clustering
 - marker extraction
 - heuristic cell-type annotation
-- optional single-gene summary
+- optional single-gene summaries
 
-## CRC Workflow
+### `crc/`
 
-Directory:
-- `crc/`
+This module is a larger analysis workspace for colorectal cancer datasets, including:
 
-Contents:
-- `config/`
-- `src/`
-- `workflows/`
-- `requirements.txt`
-- `expected_results/`
-
-Use this workflow when you want a more complete downstream workspace with:
 - multi-dataset integration
 - major cell-type annotation
 - CD8 T-cell refinement
-- macrophage / myeloid refinement
+- macrophage or myeloid refinement
 - CellChat-ready downstream communication analysis
 
-## No Data Policy
+## Quick Start
 
-This repository is prepared for code and workflow sharing only.
+Run the workflow from the relevant module directory:
 
-Excluded on purpose:
-- `data/`
-- public dataset downloads
-- `.venv/`
-- `.r_libs/`
-- generated `results/`
-- generated `analysis_outputs/`
+```bash
+cd pbmc
+./workflows/run_pbmc_analysis.sh
+```
 
-## Expected Outputs
+or:
 
-Each workflow has its own output skeleton:
+```bash
+cd crc
+./workflows/run_crc_pipeline.sh
+```
+
+Refer to each module-level README for environment setup and workflow-specific parameters.
+
+## Repository Policy
+
+This repository is intentionally prepared for code and workflow sharing only.
+
+Included:
+
+- code
+- workflow wrappers
+- configuration
+- documentation
+- expected output skeletons
+
+Excluded:
+
+- raw or processed data
+- downloaded public datasets
+- AnnData or Seurat objects
+- generated figures and tables
+- local virtual environments
+- local R package libraries
+- generated `results/` or `analysis_outputs/`
+
+## Expected Results
+
+Each module contains an `expected_results/` directory that documents the intended output structure without shipping real outputs:
 
 - `pbmc/expected_results/`
 - `crc/expected_results/`
 
-These describe the intended directory layout and major output artifact types without shipping any real result files.
+These folders are designed to make the repository reproducible and reviewable while keeping it lightweight for public distribution.
