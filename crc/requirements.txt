@@ -1,0 +1,13 @@
+scanpy==1.12
+bbknn==1.6.0
+pandas==2.3.3
+numpy==2.4.3
+scipy==1.17.1
+matplotlib==3.10.8
+seaborn==0.13.2
+h5py==3.16.0
+python-igraph==1.0.0
+leidenalg==0.11.0
+tables==3.11.1
+PyYAML==6.0.3
+harmonypy==0.2.0

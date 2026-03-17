@@ -1,0 +1,226 @@
+major_cell_types:
+  CD8 T:
+    - CD3D
+    - CD3E
+    - TRAC
+    - CD8A
+    - CD8B
+    - CCL5
+    - GZMK
+  CD4/Treg:
+    - CD3D
+    - CD3E
+    - TRAC
+    - IL7R
+    - LTB
+    - MALAT1
+    - FOXP3
+    - IL2RA
+  NK:
+    - NKG7
+    - GNLY
+    - KLRD1
+    - FCGR3A
+    - CTSW
+  B:
+    - MS4A1
+    - CD79A
+    - CD79B
+    - CD74
+    - HLA-DRA
+  Plasma:
+    - MZB1
+    - JCHAIN
+    - SDC1
+    - XBP1
+    - IGKC
+  Myeloid:
+    - LST1
+    - TYROBP
+    - FCER1G
+    - AIF1
+    - CTSB
+    - LYZ
+    - C1QC
+  Mast:
+    - KIT
+    - TPSAB1
+    - TPSB2
+    - CPA3
+  Fibroblast:
+    - COL1A1
+    - COL1A2
+    - COL3A1
+    - DCN
+    - LUM
+    - TAGLN
+  Endothelial:
+    - PECAM1
+    - VWF
+    - KDR
+    - EMCN
+    - ESAM
+  Epithelial:
+    - EPCAM
+    - KRT8
+    - KRT18
+    - KRT19
+    - MSLN
+    - MUC1
+  Cycling:
+    - MKI67
+    - TOP2A
+    - STMN1
+    - TYMS
+    - PCLAF
+
+lineage_scores:
+  T_cell:
+    - CD3D
+    - CD3E
+    - TRAC
+    - LTB
+    - IL7R
+  NK_cell:
+    - NKG7
+    - GNLY
+    - KLRD1
+    - FCGR3A
+    - CTSW
+  CD8_core:
+    - CD8A
+    - CD8B
+    - CCL5
+    - GZMK
+    - TRAC
+  CD4_core:
+    - IL7R
+    - LTB
+    - MAL
+    - TCF7
+    - LTB
+  Treg:
+    - FOXP3
+    - IL2RA
+    - TIGIT
+    - CTLA4
+
+cd8_states:
+  Tpex:
+    - TCF7
+    - SLAMF6
+    - XCL1
+    - IL7R
+    - CXCR5
+  Early_Tex:
+    - PDCD1
+    - TOX
+    - XCL1
+    - TNFRSF9
+    - MYB
+  Teff_like:
+    - CX3CR1
+    - TBX21
+    - KLRG1
+    - GZMB
+    - IFNG
+  Tem:
+    - GZMK
+    - GZMA
+    - CXCR3
+    - CCL5
+    - LTB
+  Term_Tex:
+    - HAVCR2
+    - ENTPD1
+    - LAG3
+    - TIGIT
+    - CD101
+    - CXCL13
+
+cd8_merged_states:
+  Tpex_like:
+    - TCF7
+    - IL7R
+    - SLAMF6
+    - LTB
+    - CXCR5
+  Early_Tex:
+    - PDCD1
+    - TOX
+    - TIGIT
+    - XCL1
+    - TNFRSF9
+  Effector_memory:
+    - GZMK
+    - GZMA
+    - CCL5
+    - CXCR3
+    - IFNG
+  Terminal_Tex:
+    - HAVCR2
+    - ENTPD1
+    - LAG3
+    - CXCL13
+    - GZMB
+  Stress_program:
+    - ISG15
+    - IFI6
+    - LY6E
+    - MKI67
+    - TOP2A
+
+macrophage_states:
+  C1QC_TAM:
+    - C1QA
+    - C1QB
+    - C1QC
+    - APOE
+    - LGMN
+    - DAB2
+    - SLC40A1
+  SPP1_TAM:
+    - SPP1
+    - GPNMB
+    - CTSB
+    - CTSL
+    - APOC1
+    - FABP5
+    - CD9
+  FOLR2_TAM:
+    - FOLR2
+    - LYVE1
+    - SEPP1
+    - PLTP
+    - CD163
+    - F13A1
+    - STAB1
+  Inflammatory_Macro:
+    - IL1B
+    - NLRP3
+    - NAMPT
+    - PLAUR
+    - VEGFA
+    - C15ORF48
+    - EREG
+  Monocyte_CD14:
+    - S100A8
+    - S100A9
+    - FCN1
+    - LYZ
+    - VCAN
+    - S100A12
+  Monocyte_CD16:
+    - FCGR3A
+    - LST1
+    - IFITM3
+    - SAT1
+    - AIF1
+    - TYMP
+  Dendritic:
+    - CD1C
+    - CLEC10A
+    - CLEC9A
+    - BATF3
+    - GPR183
+    - LILRA4

@@ -1,0 +1,56 @@
+general:
+  random_state: 42
+  target_sum: 10000
+  n_top_genes: 3000
+  n_pcs: 50
+  leiden_resolution: 0.8
+  neighbors_within_batch: 8
+  batch_key: dataset
+  umap_min_dist: 0.12
+  umap_spread: 1.35
+  umap_negative_sample_rate: 18
+  umap_repulsion_strength: 1.7
+  umap_init_pos: spectral
+
+gse178341:
+  min_genes: 200
+  max_genes: 7500
+  min_counts: 500
+  max_counts: 60000
+  max_mt_pct: 20
+  min_cells_per_gene: 5
+
+gse146771:
+  min_genes: 250
+  max_genes: 7000
+  min_counts_proxy: 500
+  max_counts_proxy: 50000
+  max_ribo_pct: 30
+  matrix_logged: true
+  loader_chunk_size: 256
+
+cd8:
+  n_top_genes: 3000
+  n_pcs: 35
+  n_neighbors: 14
+  harmony_max_iter: 10
+  leiden_resolution: 0.8
+  min_cells: 200
+  umap_min_dist: 0.32
+  umap_spread: 1.15
+  umap_negative_sample_rate: 12
+  umap_repulsion_strength: 1.1
+  umap_init_pos: spectral
+
+myeloid:
+  n_top_genes: 3000
+  n_pcs: 35
+  n_neighbors: 14
+  harmony_max_iter: 10
+  leiden_resolution: 0.55
+  min_cells_per_cluster: 80
+  umap_min_dist: 0.32
+  umap_spread: 1.15
+  umap_negative_sample_rate: 12
+  umap_repulsion_strength: 1.1
+  umap_init_pos: spectral
